@@ -10,9 +10,6 @@ class Flutter1 extends StatefulWidget {
 }
 
 class _Flutter1 extends State<Flutter1> {
-  void pressSimpan(){
-    print("Hello");
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +18,6 @@ class _Flutter1 extends State<Flutter1> {
         title: Text(widget.title),
       ),
       body: Center(
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -33,7 +29,7 @@ class _Flutter1 extends State<Flutter1> {
             ),
 
             Padding(
-              padding: EdgeInsets.all(5.0),
+              padding: EdgeInsets.all(16.0),
             ),
 
             TextFormField(
@@ -45,16 +41,16 @@ class _Flutter1 extends State<Flutter1> {
               )
               ),
             ),
-            RaisedButton(
-              onPressed: ()=> pressSimpan(),
-              color: Colors.lightBlueAccent,
-              child: Text(
-                "Simpan",
-                style: TextStyle(
-                  color: Colors.white
-                ),
+
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
               ),
-            )
+              child: Text('Simpan'),
+              onPressed: () {
+                //proses di sini
+              },
+            ),
           ],
         ),
       ),
