@@ -44,7 +44,7 @@ class _Flutter2 extends State<Flutter2> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                 ),
-                child: Text('Simpan'),
+                child: Text('Submit'),
                 onPressed: () {
                   if(_formKey.currentState!.validate()) {}
                 },
@@ -53,7 +53,7 @@ class _Flutter2 extends State<Flutter2> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.blue,
                 ),
-                child: Text('Kembali'),
+                child: Text('Logout'),
                 onPressed: () async {
                   SharedPreferences pref = await SharedPreferences.getInstance();
                   await pref.setInt("is_login", 0);
