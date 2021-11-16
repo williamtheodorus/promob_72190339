@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:promob_72190339/flutter2.dart';
+import 'package:promob_72190339/dashboard.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Login Page'),
     );
   }
 }
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if(isLogin == 1){
       Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => Flutter2(title: "Halo Push",)),
+          MaterialPageRoute(builder: (context) => Dashboard(title: "Dashboard",)),
       );
     }
   }
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 await pref.setInt("is_login", 1);
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Flutter2(title: "Halo Push",)),
+                  MaterialPageRoute(builder: (context) => Dashboard(title: "Dashboard",)),
                 );
               },
             ),
