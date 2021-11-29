@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:promob_72190339/model.dart';
 
 class DashboardMahasiswa extends StatefulWidget {
   const DashboardMahasiswa({Key? key, required this.title}) : super(key: key);
@@ -11,6 +12,12 @@ class DashboardMahasiswa extends StatefulWidget {
 
 class _DashboardMahasiswa extends State<DashboardMahasiswa> {
   final _formKey = GlobalKey<FormState>();
+
+  List<Mahasiswa> lMhs = new List();
+
+  FutureOr onGoBack(dynamic value) {
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
